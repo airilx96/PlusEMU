@@ -85,6 +85,9 @@
       <HintPath>packages\DotNetty.Codecs.0.6.0\lib\net45\DotNetty.Codecs.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="DotNetty.Codecs.Http, Version=0.6.0.0, Culture=neutral, PublicKeyToken=bc13ca065fa06c29, processorArchitecture=MSIL">
+      <HintPath>packages\DotNetty.Codecs.Http.0.6.0\lib\net45\DotNetty.Codecs.Http.dll</HintPath>
+    </Reference>
     <Reference Include="DotNetty.Common, Version=0.6.0.0, Culture=neutral, PublicKeyToken=bc13ca065fa06c29">
       <HintPath>packages\DotNetty.Common.0.6.0\lib\net45\DotNetty.Common.dll</HintPath>
       <Private>True</Private>
@@ -1091,6 +1094,8 @@
     <Compile Include="Network\Codec\GameDecoder.cs" />
     <Compile Include="Network\Codec\GameEncoder.cs" />
     <Compile Include="Network\Codec\GamePolicyDecoder.cs" />
+    <Compile Include="Network\Codec\WebSocketFrameCodec.cs" />
+    <Compile Include="Network\Handler\MessageInterceptorHandler.cs" />
     <Compile Include="Network\NetworkBootstrap.cs" />
     <Compile Include="Network\NetworkChannelHandler.cs" />
     <Compile Include="PlusEnvironment.cs" />

@@ -6,6 +6,7 @@ using DotNetty.Transport.Channels;
 using DotNetty.Transport.Channels.Sockets;
 using log4net;
 using Plus.Network.Codec;
+using Plus.Network.Handler;
 using System.Net;
 using System.Threading.Tasks;
 
@@ -39,6 +40,7 @@ namespace Plus.Network
                 .Channel<TcpServerSocketChannel>()
                 .ChildHandler(new ActionChannelInitializer<IChannel>(channel =>
                 {
+                    channel.Pipeline.AddLast("messageInterceptor", new MessageInterceptorHandler());
                     channel.Pipeline.AddLast("xmlDecoder", new GamePolicyDecoder());
                     channel.Pipeline.AddLast("frameDecoder", new LengthFieldBasedFrameDecoder(500000, 0, 4, 0, 4));
                     channel.Pipeline.AddLast("gameEncoder", new GameEncoder());

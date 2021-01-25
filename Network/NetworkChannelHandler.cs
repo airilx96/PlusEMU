@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 using DotNetty.Handlers.Timeout;
 using DotNetty.Transport.Channels;
 using DotNetty.Transport.Channels.Sockets;
@@ -23,6 +24,7 @@ namespace Plus.Network
 
         public override void ExceptionCaught(IChannelHandlerContext context, Exception exception)
         {
+            if (exception is IOException) return;
             log.Error(exception.Message);
         }
 
