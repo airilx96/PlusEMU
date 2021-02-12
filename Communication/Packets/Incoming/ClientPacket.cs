@@ -7,7 +7,7 @@ namespace Plus.Communication.Packets.Incoming
 {
     public class ClientPacket
     {
-        private IByteBuffer buffer;
+        private readonly IByteBuffer buffer;
         public short Id { get; }
 
         public ClientPacket(short id, IByteBuffer buf)
@@ -20,7 +20,7 @@ namespace Plus.Communication.Packets.Incoming
         {
             int length = buffer.ReadShort();
             IByteBuffer data = buffer.ReadBytes(length);
-            return Encoding.Default.GetString(data.Array);
+            return Encoding.UTF8.GetString(data.Array);
         }
 
         public int PopInt() =>
