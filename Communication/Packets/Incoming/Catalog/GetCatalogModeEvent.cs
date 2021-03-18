@@ -1,4 +1,5 @@
-﻿using Plus.HabboHotel.GameClients;
+﻿using Plus.Communication.Packets.Outgoing.Catalog;
+using Plus.HabboHotel.GameClients;
 
 namespace Plus.Communication.Packets.Incoming.Catalog
 {
@@ -6,7 +7,8 @@ namespace Plus.Communication.Packets.Incoming.Catalog
     {
         public void Parse(GameClient session, ClientPacket packet)
         {
-            // string mode = packet.PopString();
+            string mode = packet.PopString();
+            session.SendPacket(new CatalogIndexComposer(session, PlusEnvironment.GetGame().GetCatalog().GetPages()));
         }
     }
 }
