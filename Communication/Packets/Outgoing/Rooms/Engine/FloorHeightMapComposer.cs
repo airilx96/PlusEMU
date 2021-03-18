@@ -14,7 +14,7 @@
 
         public override void Compose(ServerPacket packet)
         {
-            packet.WriteBoolean(false);
+            packet.WriteBoolean(true);// zoomed in
             packet.WriteInteger(WallHeight);
             packet.WriteString(Map);
         }
