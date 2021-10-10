@@ -14,7 +14,7 @@ namespace Plus.HabboHotel.Achievements
 {
     public class AchievementManager
     {
-        private static readonly ILog log = LogManager.GetLogger("Plus.HabboHotel.Achievements.AchievementManager");
+        private static readonly ILog log = LogManager.GetLogger(typeof(AchievementManager));
 
         public Dictionary<string, Achievement> Achievements;
 

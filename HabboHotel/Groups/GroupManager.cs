@@ -11,7 +11,7 @@ namespace Plus.HabboHotel.Groups
 {
     public class GroupManager
     {
-        private static readonly ILog Log = LogManager.GetLogger("Plus.HabboHotel.Groups.GroupManager");
+        private static readonly ILog Log = LogManager.GetLogger(typeof(GroupManager));
 
         private readonly object _groupLoadingSync;
         private readonly ConcurrentDictionary<int, Group> _groups;

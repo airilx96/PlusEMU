@@ -11,7 +11,7 @@ namespace Plus.HabboHotel.Cache
 {
     public class CacheManager
     {
-        private static readonly ILog Log = LogManager.GetLogger("Plus.HabboHotel.Cache.CacheManager");
+        private static readonly ILog Log = LogManager.GetLogger(typeof(CacheManager));
         private readonly ConcurrentDictionary<int, UserCache> _usersCached;
         private readonly ProcessComponent _process;
 

@@ -9,7 +9,7 @@ namespace Plus.HabboHotel.Items.Televisions
 {
     public class TelevisionManager
     {
-        private static readonly ILog log = LogManager.GetLogger("Plus.HabboHotel.Items.Televisions.TelevisionManager");
+        private static readonly ILog log = LogManager.GetLogger(typeof(TelevisionManager));
 
         public Dictionary<int, TelevisionItem> _televisions;
 

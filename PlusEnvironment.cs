@@ -31,7 +31,7 @@ namespace Plus
 {
     public static class PlusEnvironment
     {
-        private static readonly ILog log = LogManager.GetLogger("Plus.PlusEnvironment");
+        private static readonly ILog log = LogManager.GetLogger(typeof(PlusEnvironment));
 
         public const string PrettyVersion = "Plus Emulator";
         public const string PrettyBuild = "3.4.3.0";
@@ -91,9 +91,7 @@ namespace Plus
 
             try
             {
-                string projectSolutionPath = Path.GetDirectoryName(Path.GetDirectoryName(Directory.GetCurrentDirectory()));
-
-                _configuration = new ConfigurationData(projectSolutionPath + "//Config//config.ini");
+                _configuration = new ConfigurationData($"Config{Path.DirectorySeparatorChar}config.ini");
 
                 var connectionString = new MySqlConnectionStringBuilder
                 {

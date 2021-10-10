@@ -20,7 +20,7 @@ namespace Plus.Communication.Packets.Outgoing.Groups
             this.Symbols = symbols;
             this.BaseColours = baseColours;
             this.SymbolColours = symbolColours;
-            this.BackgroundColours = BackgroundColours;
+            this.BackgroundColours = backgroundColours;
         }
 
         public override void Compose(ServerPacket packet)

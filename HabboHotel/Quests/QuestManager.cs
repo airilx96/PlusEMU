@@ -15,7 +15,7 @@ namespace Plus.HabboHotel.Quests
 {
     public class QuestManager
     {
-        private static readonly ILog log = LogManager.GetLogger("Plus.HabboHotel.Quests.QuestManager");
+        private static readonly ILog log = LogManager.GetLogger(typeof(QuestManager));
 
         private Dictionary<int, Quest> _quests;
         private Dictionary<string, int> _questCount;

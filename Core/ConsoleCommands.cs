@@ -7,7 +7,7 @@ namespace Plus.Core
 {
     public static class ConsoleCommands
     {
-        private static readonly ILog Log = LogManager.GetLogger("Plus.Core.ConsoleCommands");
+        private static readonly ILog Log = LogManager.GetLogger(typeof(ConsoleCommands));
 
         public static void InvokeCommand(string inputData)
         {

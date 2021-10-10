@@ -10,7 +10,7 @@ namespace Plus.Communication.Rcon
         private Socket _socket;
         private byte[] _buffer = new byte[1024];
 
-        private static readonly ILog Log = LogManager.GetLogger("Plus.Communication.Rcon.RconConnection");
+        private static readonly ILog Log = LogManager.GetLogger(typeof(RconConnection));
 
         public RconConnection(Socket socket)
         {

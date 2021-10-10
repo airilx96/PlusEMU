@@ -8,7 +8,7 @@ namespace Plus.HabboHotel.Users.Process
 {
     sealed class ProcessComponent
     {
-        private static readonly ILog log = LogManager.GetLogger("Plus.HabboHotel.Users.Process.ProcessComponent");
+        private static readonly ILog log = LogManager.GetLogger(typeof(ProcessComponent));
 
         /// <summary>
         /// Player to update, handle, change etc.
