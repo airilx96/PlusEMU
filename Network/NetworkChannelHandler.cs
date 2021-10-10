@@ -25,7 +25,7 @@ namespace Plus.Network
         public override void ExceptionCaught(IChannelHandlerContext context, Exception exception)
         {
             if (exception is IOException) return;
-            log.Error(exception.Message);
+            log.Debug(exception.Message);
         }
 
         protected override void ChannelRead0(IChannelHandlerContext ctx, ClientPacket msg)
