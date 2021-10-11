@@ -14,7 +14,7 @@ namespace Plus.HabboHotel.Rooms
 {
     public class RoomManager
     {
-        private static readonly ILog log = LogManager.GetLogger("Plus.HabboHotel.Rooms.RoomManager");
+        private static readonly ILog log = LogManager.GetLogger(typeof(RoomManager));
 
         private readonly object _roomLoadingSync;
 

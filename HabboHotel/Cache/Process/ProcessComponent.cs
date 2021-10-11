@@ -12,7 +12,7 @@ namespace Plus.HabboHotel.Cache.Process
 {
     sealed class ProcessComponent
     {
-        private static readonly ILog Log = LogManager.GetLogger("Plus.HabboHotel.Cache.Process.ProcessComponent");
+        private static readonly ILog Log = LogManager.GetLogger(typeof(ProcessComponent));
 
         /// <summary>
         /// ThreadPooled Timer.

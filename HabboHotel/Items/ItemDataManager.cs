@@ -10,7 +10,7 @@ namespace Plus.HabboHotel.Items
 {
     public class ItemDataManager
     {
-        private static readonly ILog log = LogManager.GetLogger("Plus.HabboHotel.Items.ItemDataManager");
+        private static readonly ILog log = LogManager.GetLogger(typeof(ItemDataManager));
 
         public Dictionary<int, ItemData> _items;
         public Dictionary<int, ItemData> _gifts;//<SpriteId, Item>

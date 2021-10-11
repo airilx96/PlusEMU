@@ -9,7 +9,7 @@ namespace Plus.HabboHotel.Talents
 {
     public class TalentTrackManager
     {
-        private static ILog log = LogManager.GetLogger("Plus.HabboHotel.Talents.TalentManager");
+        private static ILog log = LogManager.GetLogger(typeof(TalentTrackManager));
 
         private readonly Dictionary<int, TalentTrackLevel> _citizenshipLevels;
 

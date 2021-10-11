@@ -10,7 +10,7 @@ namespace Plus.Core.Language
     {
         private readonly Dictionary<string, string> _values;
 
-        private static readonly ILog log = LogManager.GetLogger("Plus.Core.Language.LanguageManager");
+        private static readonly ILog log = LogManager.GetLogger(typeof(LanguageManager));
 
         public LanguageManager()
         {

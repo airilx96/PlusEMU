@@ -9,7 +9,7 @@ namespace Plus.HabboHotel.Badges
 {
     public class BadgeManager
     {
-        private static readonly ILog Log = LogManager.GetLogger("Plus.HabboHotel.Badges.BadgeManager");
+        private static readonly ILog Log = LogManager.GetLogger(typeof(BadgeManager));
 
         private readonly Dictionary<string, BadgeDefinition> _badges;
 

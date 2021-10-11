@@ -3,6 +3,10 @@ using System.Runtime.InteropServices;
 using System.Security.Permissions;
 using Plus.Core;
 using log4net.Config;
+using log4net.Repository;
+using System.Reflection;
+using log4net;
+using System.IO;
 
 namespace Plus
 {
@@ -23,11 +27,14 @@ namespace Plus
         [DllImport("kernel32.dll", ExactSpelling = true)]
         private static extern IntPtr GetConsoleWindow();
 
-        [SecurityPermission(SecurityAction.Demand, Flags = SecurityPermissionFlag.ControlAppDomain)]
+        private static readonly ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
         public static void Main(string[] Args)
         {
-            XmlConfigurator.Configure();
+            ILoggerRepository repository = LogManager.GetRepository(Assembly.GetCallingAssembly());
+            var fileInfo = new FileInfo(@"app.config");
+
+            XmlConfigurator.Configure(repository, fileInfo);
 
             Console.ForegroundColor = ConsoleColor.White;
             Console.CursorVisible = false;

@@ -10,7 +10,7 @@ namespace Plus.Core.Settings
     {
         private readonly Dictionary<string, string> _settings;
 
-        private static readonly ILog Log = LogManager.GetLogger("Plus.Core.Settings.SettingsManager");
+        private static readonly ILog Log = LogManager.GetLogger(typeof(SettingsManager));
 
         public SettingsManager()
         {

@@ -1,15 +1,16 @@
 ﻿using log4net;
 using System;
+using System.Reflection;
 
 namespace Plus.Core
 {
     public static class ExceptionLogger
     {
-        private static readonly ILog SqlLogger = LogManager.GetLogger("MySQL");
-        private static readonly ILog ThreadLogger = LogManager.GetLogger("Thread");
-        private static readonly ILog DefaultLogger = LogManager.GetLogger("Exception");
-        private static readonly ILog CriticalExceptionLogger = LogManager.GetLogger("Critical");
-        private static readonly ILog WiredLogger = LogManager.GetLogger("Wired");
+        private static readonly ILog SqlLogger = LogManager.GetLogger(Assembly.GetCallingAssembly(), "MySQL");
+        private static readonly ILog ThreadLogger = LogManager.GetLogger(Assembly.GetCallingAssembly(), "Thread");
+        private static readonly ILog DefaultLogger = LogManager.GetLogger(Assembly.GetCallingAssembly(), "Exception");
+        private static readonly ILog CriticalExceptionLogger = LogManager.GetLogger(Assembly.GetCallingAssembly(), "Critical");
+        private static readonly ILog WiredLogger = LogManager.GetLogger(Assembly.GetCallingAssembly(), "Wired");
 
         public static void LogQueryError(string query, Exception exception)
         {

@@ -8,7 +8,7 @@ namespace Plus.HabboHotel.Rooms.Chat.Styles
 {
     public sealed class ChatStyleManager
     {
-        private static readonly ILog log = LogManager.GetLogger("Plus.HabboHotel.Rooms.Chat.Styles.ChatStyleManager");
+        private static readonly ILog log = LogManager.GetLogger(typeof(ChatStyleManager));
 
         private readonly Dictionary<int, ChatStyle> _styles;
 

@@ -14,7 +14,7 @@ namespace Plus.Communication.Packets.Incoming.Rooms.AI.Pets
 {
     class PlacePetEvent : IPacketEvent
     {
-        private static readonly ILog Log = LogManager.GetLogger("Plus.Communication.Packets.Incoming.Rooms.AI.Pets.PlacePetEvent");
+        private static readonly ILog Log = LogManager.GetLogger(typeof(PlacePetEvent));
 
         public void Parse(GameClient session, ClientPacket packet)
         {

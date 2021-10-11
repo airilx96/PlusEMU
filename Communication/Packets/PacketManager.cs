@@ -57,7 +57,7 @@ namespace Plus.Communication.Packets
 {
     public sealed class PacketManager
     {
-        private static readonly ILog Log = LogManager.GetLogger("Plus.Communication.Packets");
+        private static readonly ILog Log = LogManager.GetLogger(typeof(PacketManager));
 
         /// <summary>
         ///     Testing the Task code

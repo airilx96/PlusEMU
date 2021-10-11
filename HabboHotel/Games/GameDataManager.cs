@@ -10,7 +10,7 @@ namespace Plus.HabboHotel.Games
 {
     public class GameDataManager
     {
-        private static readonly ILog log = LogManager.GetLogger("Plus.HabboHotel.Games.GameDataManager");
+        private static readonly ILog log = LogManager.GetLogger(typeof(GameDataManager));
 
         private readonly Dictionary<int, GameData> _games;
 

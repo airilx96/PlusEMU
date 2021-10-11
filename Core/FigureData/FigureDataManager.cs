@@ -13,7 +13,7 @@ namespace Plus.Core.FigureData
 {
     public class FigureDataManager
     {
-        private static readonly ILog Log = LogManager.GetLogger("Plus.Core.FigureData");
+        private static readonly ILog Log = LogManager.GetLogger(typeof(FigureDataManager));
 
         private readonly List<string> _requirements;
         private readonly Dictionary<int, Palette> _palettes; //pallet id, Pallet
@@ -40,11 +40,8 @@ namespace Plus.Core.FigureData
             if (_setTypes.Count > 0)
                 _setTypes.Clear();
 
-
-            string projectSolutionPath = Path.GetDirectoryName(Path.GetDirectoryName(Directory.GetCurrentDirectory()));
-
             XmlDocument xDoc = new XmlDocument();
-            xDoc.Load(projectSolutionPath + "//Config//figuredata.xml");
+            xDoc.Load($"Config{Path.DirectorySeparatorChar}figuredata.xml");
 
             XmlNodeList colors = xDoc.GetElementsByTagName("colors");
             foreach (XmlNode node in colors)

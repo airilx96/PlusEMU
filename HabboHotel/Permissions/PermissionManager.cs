@@ -10,7 +10,7 @@ namespace Plus.HabboHotel.Permissions
 {
     public sealed class PermissionManager
     {
-        private static readonly ILog log = LogManager.GetLogger("Plus.HabboHotel.Permissions.PermissionManager");
+        private static readonly ILog log = LogManager.GetLogger(typeof(PermissionManager));
 
         private readonly Dictionary<int, Permission> Permissions = new Dictionary<int, Permission>();
 

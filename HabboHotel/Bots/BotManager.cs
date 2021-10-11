@@ -12,7 +12,7 @@ namespace Plus.HabboHotel.Bots
 {
     public class BotManager
     {
-        private static readonly ILog Log = LogManager.GetLogger("Plus.HabboHotel.Bots.BotManager");
+        private static readonly ILog Log = LogManager.GetLogger(typeof(BotManager));
 
         private readonly List<BotResponse> _responses;
 

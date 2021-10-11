@@ -12,7 +12,7 @@ namespace Plus.HabboHotel.Moderation
 {
     public sealed class ModerationManager
     {
-        private static ILog log = LogManager.GetLogger("Plus.HabboHotel.Moderation.ModerationManager");
+        private static ILog log = LogManager.GetLogger(typeof(ModerationManager));
 
         private int _ticketCount = 1;
         private List<string> _userPresets = new List<string>();

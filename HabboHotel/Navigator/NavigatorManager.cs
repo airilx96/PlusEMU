@@ -10,7 +10,7 @@ namespace Plus.HabboHotel.Navigator
 {
     public sealed class NavigatorManager
     {
-        private static readonly ILog log = LogManager.GetLogger("Plus.HabboHotel.Navigator.NavigatorManager");
+        private static readonly ILog log = LogManager.GetLogger(typeof(NavigatorManager));
         
         private readonly Dictionary<int, FeaturedRoom> _featuredRooms;
 

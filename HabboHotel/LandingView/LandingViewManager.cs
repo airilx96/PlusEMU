@@ -9,7 +9,7 @@ namespace Plus.HabboHotel.LandingView
 {
     public class LandingViewManager
     {
-        private static readonly ILog log = LogManager.GetLogger("Plus.HabboHotel.LandingView.LandingViewManager");
+        private static readonly ILog log = LogManager.GetLogger(typeof(LandingViewManager));
 
         private Dictionary<int, Promotion> _promotionItems;
 
